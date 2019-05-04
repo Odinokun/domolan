@@ -1,0 +1,147 @@
+.top-section {
+  background-color: #cc2b5e;
+  background-image: linear-gradient(to top, #753a88 0%, #cc2b5e 100%);
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+}
+
+.top-section__title {
+  font-family: $font-bold;
+  font-size: 150px;
+  line-height: 1;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  color: #fff;
+
+  @include max(1024) {
+    font-size: 100px;
+  }
+  @include max(700) {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  @include max(425) {
+    font-size: 50px;
+  }
+  @include maxHeight(680) {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+}
+
+.top-section__subtitle {
+  font-family: $font-title;
+  font-size: 36px;
+  line-height: 1;
+  margin-bottom: 70px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+
+  @include max(1024) {
+    font-size: 26px;
+  }
+  @include max(700) {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  @include max(425) {
+    font-size: 14px;
+  }
+  @include maxHeight(680) {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+.top-section__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.privat-btn {
+  font-family: $font-bold;
+  font-size: 14px;
+  line-height: 1;
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 15px 30px;
+  transition: .5s;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 3px solid #fff;
+
+  @include max(740) {
+    font-family: $font-title;
+    font-size: 12px;
+    border: 2px solid #fff;
+  }
+  @include maxHeight(400) {
+    font-family: $font-title;
+    font-size: 12px;
+    border: 2px solid #fff;
+  }
+  &:hover {
+    color: $highlight-2;
+    background-color: #fff;
+  }
+}
+
+.top-section__row--phone {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+
+  @include max(425) {
+    flex-direction: column;
+  }
+}
+
+.top-section__phone-link {
+  font-family: $font-title;
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  margin: 10px 30px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+
+  @include max(700) {
+    font-size: 16px;
+    margin: 0 10px 10px 10px;
+  }
+  @include maxHeight(680) {
+    font-size: 16px;
+    margin: 0 10px 10px 10px;
+  }
+
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    margin: 0 auto;
+    content: '';
+    transition: width .5s;
+    background-color: $highlight-2;
+  }
+  &:hover {
+    color: $highlight-2;
+    &::before {
+      width: 80%;
+    }
+  }
+}
