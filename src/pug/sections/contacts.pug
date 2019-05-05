@@ -1,0 +1,44 @@
+//begin contacts
+section.contacts#contacts
+  .container
+    header.section-header
+      h2.section-header__title Контакти
+    .contacts-row
+      .contacts-item
+        h3.contacts-item__title З питаннь підключення та технічної підтримки
+        span.contacts-item__description Цілодобово (24/7/365)
+
+      .contacts-item
+        a.contacts-item__phone.contacts-item__phone--kyivstar(href="tel:+380954408080")
+          .contacts-item__icon
+            +svg('kyivstar')
+          .contacts-item__phone-link 095-440-80-80
+
+        a.contacts-item__phone.contacts-item__phone--vodafone(href="tel:+380684408080")
+          .contacts-item__icon
+            +svg('vodafone')
+          .contacts-item__phone-link 068-440-80-80
+        a.contacts-item__phone.contacts-item__phone--lifecell(href="tel:+380734408080")
+          .contacts-item__icon
+            +svg('lifecell')
+          .contacts-item__phone-link 073-440-80-80
+
+    .contacts-row
+      .contacts-item
+        h3.contacts-item__title Ми у месенджерах
+        span.contacts-item__description Отримувати оперативно всi новини, акцiї та аварiйнi повiдомленя компанiї
+
+      .contacts-item
+        a.contacts-item__phone.contacts-item__phone--viber(href="viber://public?id=<?g2=AQBtebttjJgN%2FEmF7KeYdfylXtcEybgq02vOT5Ieo4bAf0PBI9KMjuB%2B31HUjHxs>" target='__blank')
+          .contacts-item__icon
+            +svg('viber')
+          .contacts-item__phone-link Viber
+
+        a.contacts-item__phone.contacts-item__phone--telegram(href="https://t.me/domolan" target='__blank')
+          .contacts-item__icon
+            +svg('telegram')
+          .contacts-item__phone-link Telegram
+
+
+
+//end contacts

@@ -7,7 +7,7 @@ $(function() {
   require('./modules/noJs')();
 
   // begin Scroll2Ancor
-  // require('./modules/scroll2ancor')();
+  require('./modules/scroll2ancor')();
 
   // begin Slick slider
   // require('./modules/slick')();
