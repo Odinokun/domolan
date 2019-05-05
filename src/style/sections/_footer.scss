@@ -1,0 +1,18 @@
+.footer {
+  padding: 5px 10px;
+  text-align: center;
+  background-color: $highlight;
+}
+
+.copyright__link {
+  font-family: $font-bold;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+  &:hover {
+    color: $highlight-2;
+  }
+}

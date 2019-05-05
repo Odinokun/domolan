@@ -7,7 +7,7 @@ module.exports = function() {
        var anchor = $(this);
        $('html, body').stop().animate({
         scrollTop: $(anchor.attr('href')).offset().top - 0 + 'px'
-       }, 1000);
+       }, 600);
     });
     return false;
   });
