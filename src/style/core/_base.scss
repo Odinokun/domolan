@@ -182,6 +182,9 @@ svg {
   text-transform: uppercase;
   background-color: transparent;
   box-shadow: none;
+  &.active {
+    pointer-events: none;
+  }
 
   @include max(740) {
     font-family: $font-title;
@@ -196,7 +199,8 @@ svg {
   @include max(740) {
     border: 2px solid $highlight;
   }
-  &:hover {
+  &:hover,
+  &.active {
     color: #fff;
     background-color: $highlight;
   }
@@ -209,7 +213,8 @@ svg {
   @include max(740) {
     border: 2px solid #fff;
   }
-  &:hover {
+  &:hover,
+  &.active {
     color: $highlight;
     background-color: #fff;
   }
