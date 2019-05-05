@@ -1,0 +1,65 @@
+.payment {
+  position: relative;
+  background-image: url('../img/bg-payment.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    opacity: .8;
+    background-color: #fff;
+  }
+}
+
+.payment-block__title {
+  font-family: $font-title;
+  font-size: 26px;
+  margin-bottom: 25px;
+  text-align: center;
+
+  @include max(700) {
+    font-size: 22px;
+  }
+}
+
+.payment-block {
+  max-width: 860px;
+  margin: 20px auto 15px;
+}
+
+.payment-block__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.payment-block__link {
+  display: block;
+  flex: none;
+  width: 150px;
+  margin: 0 15px 30px 15px;
+  border: 1px solid $highlight;
+  background-color: $highlight;
+  box-shadow: 5px 5px 13px -5px rgba(117,58,136,.5);
+
+  @include max(425) {
+    width: 130px;
+    margin: 0 10px 20px 10px;
+  }
+  &:hover {
+    img {
+      opacity: .7;
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    transition: opacity .5s;
+  }
+}
