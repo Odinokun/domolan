@@ -29,6 +29,7 @@ h6,
 p {
   font-weight: 400;
   margin: 0 0 10px 0;
+  color: $title;
 }
 h1 {
   font-family: $font-bold;
@@ -56,9 +57,6 @@ h6 {
 }
 p {
   font-size: 16px;
-  strong {
-    font-family: $font-bold;
-  }
 }
 a {
   transition: color .5s;
@@ -152,18 +150,20 @@ svg {
   }
 }
 
-// скрываем все слайды кроме первого
-// при отключенном JS
-// .slick-slide исправить на текущий класс
-.no-js .slick-slide:not(:first-child) {
-  display: none
+.section-header {
+  text-align: center;
+  padding: 20px 0;
 }
 
-// скрываем слайдер до его инициализации
-// .card-slider-lg__list исправить на текущий класс
-.card-slider-lg__list {
-  visibility: hidden;
-}
-.card-slider-lg__list.slick-initialized {
-  visibility: visible;
+.section-header__title {
+  font-size: 50px;
+  letter-spacing:2px;
+  line-height: 1;
+  margin: 0;
+  @include max(768) {
+    font-size: 40px;
+  }
+  @include max(420) {
+    font-size: 30px;
+  }
 }
