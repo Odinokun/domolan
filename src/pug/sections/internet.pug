@@ -1,0 +1,50 @@
+mixin internet-tariff__item(title, ukr, world, ip, connect, price)
+  .internet-tariff__item
+    span.internet-tariff__top-text Тариф
+    h3.internet-tariff__title #{title}
+    .internet-tariff__description
+      | швидкiсть Україна -
+      =' '
+      span #{ukr} Мбiт
+    .internet-tariff__description
+      | швидкiсть Свiт -
+      =' '
+      span #{world} Мбiт
+    .internet-tariff__description
+      | зовнiшня IP адреса -
+      =' '
+      span #{ip} грн/мiс
+    .internet-tariff__description
+      | підключення -
+      =' '
+      span #{connect}
+    .internet-tariff__description
+      | абонентська плата -
+      =' '
+      span #{price}
+    button.btn.btn--dark.popup-open Замовити
+
+//begin internet
+section.internet#internet
+  .container
+    header.section-header
+      h2.section-header__title Інтернет
+
+    .internet-tab
+      .internet-tab__btn-row
+        button.btn.btn--light.internet-tab__btn.active(data-tab='privat') Приватний сектор
+        button.btn.btn--light.internet-tab__btn(data-tab='skyscrapers') Багатоповерхові будинки
+        button.btn.btn--light.internet-tab__btn(data-tab='business') Бізнес тарифи
+      .internet-tariff.internet-tariff--privat.active
+        +internet-tariff__item('Д200',      '100', '50', '40',  'Безкоштовно', '200 грн/міс')
+        +internet-tariff__item('Д250',      '100', '80', '40',  'Безкоштовно', '250 грн/міс')
+        +internet-tariff__item('Д300',      '100', '100', '40', 'Безкоштовно', '300 грн/міс')
+        +internet-tariff__item('Д400',      '200', '100', '40', 'Безкоштовно', '400 грн/міс')
+        +internet-tariff__item('Д500',      '300', '100', '40', 'Безкоштовно', '500 грн/міс')
+        +internet-tariff__item('Вихідний',  '100', '100', '40', 'Безкоштовно', '20 грн/день')
+      .internet-tariff.internet-tariff--skyscrapers
+        +internet-tariff__item('К90',  '100', '50',  '40',  'Безкоштовно', '90 грн/міс')
+        +internet-tariff__item('К120', '100', '100', '40',  'Безкоштовно', '120 грн/міс')
+      .internet-tariff.internet-tariff--business
+        +internet-tariff__item('Б200', '100', '100', '40', 'Безкоштовно', '200 грн/міс')
+//end tv

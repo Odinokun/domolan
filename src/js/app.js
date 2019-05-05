@@ -9,6 +9,9 @@ $(function() {
   // begin Scroll2Ancor
   require('./modules/scroll2ancor')();
 
+  // begin Tabs
+  require('./modules/tabs')();
+
   // begin Slick slider
   // require('./modules/slick')();
 
