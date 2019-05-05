@@ -1,12 +1,16 @@
 module.exports = function() {
 
-  // begin menu-burger
+  // begin menu
 
   $('#burger').click(function(){
     $(this).toggleClass('open');
     $('#header-menu').toggleClass('open');
   });
 
-  // end menu-burger
+  $('.header-menu__link').click(function(){
+    $('#burger, #header-menu').removeClass('open');
+  });
+
+  // end menu
 
 };

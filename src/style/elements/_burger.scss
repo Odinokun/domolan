@@ -1,7 +1,7 @@
 .burger {
   position: fixed;
-  top: 15px;
-  right: 20px;
+  top: 7px;
+  right: 13px;
   display: none;
   width: 33px;
   height: 33px;
@@ -10,13 +10,27 @@
   @include max(860) {
     display: block;
   }
+
+  &::before {
+    position: absolute;
+    bottom: -17px;
+    left: -22px;
+    width: 100px;
+    height: 100px;
+    content: '';
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: -16px 16px 14px -23px rgba(117,58,136,1);
+  }
 }
 
 .burger-brick {
+  position: relative;
   height: 3px;
   margin-top: 6px;
   transition: .3s ease-out;
-  background: #fff;
+  background: $highlight;
 }
 
 .open {

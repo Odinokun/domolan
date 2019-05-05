@@ -67,32 +67,12 @@
 }
 
 .privat-btn {
-  font-family: $font-bold;
-  font-size: 14px;
-  line-height: 1;
-  display: inline-block;
   margin-bottom: 30px;
-  padding: 15px 30px;
-  transition: .5s;
-  text-decoration: none;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #fff;
-  border: 3px solid #fff;
 
-  @include max(740) {
-    font-family: $font-title;
-    font-size: 12px;
-    border: 2px solid #fff;
-  }
   @include maxHeight(400) {
     font-family: $font-title;
     font-size: 12px;
     border: 2px solid #fff;
-  }
-  &:hover {
-    color: $highlight-2;
-    background-color: #fff;
   }
 }
 
