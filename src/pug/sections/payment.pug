@@ -1,0 +1,32 @@
+mixin payment-block__link(img, link)
+  a.payment-block__link(href='' + link + '' target='_blank')
+    img(src='assets/img/payment/' + img + '.jpg' alt='payment service')
+
+//begin payment
+section.payment#payment
+  .container
+    header.section-header
+      h2.section-header__title Оплата послуг
+
+    .payment-block
+      h3.payment-block__title Термiнальнi системи
+      
+      .payment-block__list
+        +payment-block__link('01', 'https://privatbank.ua/map')
+        +payment-block__link('02', 'http://bnk.ua/Info/Map')
+        +payment-block__link('03', 'http://city-24.com.ua/map/')
+        +payment-block__link('04', 'http://2click.money/')
+        +payment-block__link('05', 'https://map.easypay.ua:8465/')
+        +payment-block__link('06', 'https://pay.ibox.ua/ru/map')
+        +payment-block__link('07', 'http://24nonstop.com.ua/Customers/TerminalMap')
+
+
+    .payment-block
+      h3.payment-block__title Iнтернет платежi
+
+      .payment-block__list
+        +payment-block__link('08', 'https://www.privat24.ua/')
+        +payment-block__link('09', 'https://easypay.ua/ua/catalog/internet/domolan')
+        +payment-block__link('10', 'https://www.walletone.com/uk/wallet/providers/provider/?providerId=u904')
+        +payment-block__link('11', 'https://coin.com.ua/Domolan')
+//end payment
