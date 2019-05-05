@@ -122,9 +122,9 @@ svg {
 
 
 .main-wrap {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
   min-height: 100vh;
   &.no-scroll {
     overflow: hidden;
@@ -151,19 +151,66 @@ svg {
 }
 
 .section-header {
-  text-align: center;
   padding: 20px 0;
+  text-align: center;
 }
 
 .section-header__title {
   font-size: 50px;
-  letter-spacing:2px;
   line-height: 1;
   margin: 0;
+  letter-spacing: 2px;
+
   @include max(768) {
     font-size: 40px;
   }
   @include max(420) {
     font-size: 30px;
+  }
+}
+
+.btn {
+  font-family: $font-bold;
+  font-size: 14px;
+  line-height: 1;
+  display: inline-block;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: .5s;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: transparent;
+  box-shadow: none;
+
+  @include max(740) {
+    font-family: $font-title;
+    font-size: 13px;
+  }
+}
+
+.btn.btn--dark {
+  color: $highlight;
+  border: 3px solid $highlight;
+
+  @include max(740) {
+    border: 2px solid $highlight;
+  }
+  &:hover {
+    color: #fff;
+    background-color: $highlight;
+  }
+}
+
+.btn.btn--light {
+  color: #fff;
+  border: 3px solid #fff;
+
+  @include max(740) {
+    border: 2px solid #fff;
+  }
+  &:hover {
+    color: $highlight;
+    background-color: #fff;
   }
 }

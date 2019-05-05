@@ -1,0 +1,84 @@
+.tv {
+  position: relative;
+  background-image: url('../img/bg-tv.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    opacity: .85;
+    background-color: #614385;
+  }
+
+  .section-header__title {
+    color: #fff;
+  }
+}
+
+.tv-tariff {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.tv-tariff__item {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 30px 20px 30px;
+  padding: 50px 30px;
+  text-align: center;
+  background-color: #fff;
+
+  @include max(425) {
+    margin: 0 0 20px 0;
+    padding: 40px 20px;
+  }
+  .btn {
+    margin: 40px auto 20px;
+  }
+}
+
+.tv-tariff__top-text {
+  font-family: $font-bold;
+  font-size: 24px;
+  margin-bottom: 15px;
+  @include max(425) {
+    font-size: 20px;
+  }
+}
+
+.tv-tariff__title {
+  font-family: $font-bold;
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: $highlight;
+  @include max(425) {
+    font-size: 26px;
+  }
+}
+
+.tv-tariff__class,
+.tv-tariff__price {
+  font-family: $font-title;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: $title;
+  @include max(425) {
+    font-size: 18px;
+  }
+  span {
+    font-family: $font-bold;
+    font-size: 22px;
+    @include max(425) {
+      font-size: 20px;
+    }
+  }
+}
