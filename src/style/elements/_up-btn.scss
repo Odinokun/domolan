@@ -1,0 +1,39 @@
+.up-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: .5s;
+  pointer-events: none;
+  opacity: 0;
+  border: 3px solid $title;
+  background-color: transparent;
+
+  @include max(768) {
+    right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  &.active {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  &:hover {
+    border: 3px solid $highlight;
+    background-color: $highlight;
+    svg {
+      fill: #fff;
+    }
+  }
+  svg {
+    fill: $title;
+    width: 70%;
+    max-height: 70%;
+    transition: fill .5s;
+  }
+}

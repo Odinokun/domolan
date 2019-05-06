@@ -12,6 +12,9 @@ $(function() {
   // begin Tabs
   require('./modules/tabs')();
 
+  // begin Up btn
+  require('./modules/up-btn')();
+
   // begin Slick slider
   // require('./modules/slick')();
 
