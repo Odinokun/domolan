@@ -1,10 +1,20 @@
 //begin popup
-button.popup-open popup open
-.popup__layer
-  .popup
-    h3.popup__title Popup title
-    form.popup__form
-      input.popup__input(type="text" placeholder="Ваше имя")
-      input.popup__input(type="text" placeholder="Ваше имя")
-      button.popup__btn Кнопуля
+.popup-layer
+.popup
+  .popup__close
+    +svg('close')
+  h3.popup__title Запит на підключення
+  form.popup__form
+    input.popup__input.popup__input--tariff(name='tariff' placeholder="Тариф*" required)
+    input.popup__input(name='name' placeholder="Ваше ім'я*" required)
+    input.popup__input(name='phone' placeholder="Ваш телефон*" required)
+    textarea.popup__textarea(placeholder='Коментар')
+    button.btn.btn--dark.popup__btn Відправити
+
+.popup-success
+  .popup-success__close
+    +svg('close')
+  h3.popup-success__title Ваш запит відправлений
+  span.popup-success__description Дякуємо за запит.
+  span.popup-success__description Менеджер зв'яжеться з Вами найближчим часом.
 //end popup
