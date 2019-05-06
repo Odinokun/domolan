@@ -16,7 +16,7 @@ $(function() {
   // require('./modules/slick')();
 
   // begin Popup
-  // require('./modules/popup')();
+  require('./modules/popup')();
 
   // begin menu
   require('./modules/menu')();
