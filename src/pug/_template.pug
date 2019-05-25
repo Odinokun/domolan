@@ -35,6 +35,15 @@ html(lang="uk")
 
     //[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]
 
+    // Global site tag (gtag.js) - BEGIN Google Analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-81748727-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-81748727-1');
+    // Global site tag (gtag.js) - END Google Analytics
+
   body
     block content
 
